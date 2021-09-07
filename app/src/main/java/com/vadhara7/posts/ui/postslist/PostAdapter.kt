@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.vadhara7.posts.data.responses.PostsList
+import com.vadhara7.posts.data.responses.Data
 import com.vadhara7.posts.databinding.PostItemBinding
 
 
-class PostAdapter : ListAdapter<PostsList, PostAdapter.PostViewHolder>(PostComparator()) {
+class PostAdapter : ListAdapter<Data, PostAdapter.PostViewHolder>(PostComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val binding =
@@ -27,19 +27,19 @@ class PostAdapter : ListAdapter<PostsList, PostAdapter.PostViewHolder>(PostCompa
     class PostViewHolder(private val binding: PostItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(post: PostsList) {
+        fun bind(post: Data) {
             binding.apply {
-                titleText.text = post.code.toString()
-                bodyText.text = post.code.toString()
+                titleText.text = post.title
+                bodyText.text = post.body
             }
         }
     }
 
-    class PostComparator : DiffUtil.ItemCallback<PostsList>() {
-        override fun areItemsTheSame(oldItem: PostsList, newItem: PostsList) =
-            oldItem.code == newItem.code
+    class PostComparator : DiffUtil.ItemCallback<Data>() {
+        override fun areItemsTheSame(oldItem: Data, newItem: Data) =
+            oldItem.title == newItem.title
 
-        override fun areContentsTheSame(oldItem: PostsList, newItem: PostsList) =
+        override fun areContentsTheSame(oldItem: Data, newItem: Data) =
             oldItem == newItem
     }
 }

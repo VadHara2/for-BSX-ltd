@@ -28,6 +28,7 @@ class PostActivity : AppCompatActivity(R.layout.activity_post) {
             }
 
             viewModel.posts.observe(this@PostActivity) { result ->
+
                 restaurantAdapter.submitList(result.data)
 
                 progressBar.isVisible = result is Resource.Loading && result.data.isNullOrEmpty()

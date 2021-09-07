@@ -1,12 +1,10 @@
 package com.vadhara7.posts.data.responses
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
+import com.vadhara7.posts.util.Converters
 
-@Entity(tableName = "posts")
-data class PostsList(
-    @PrimaryKey
-    val code: Int,
-//    val data: List<Data>,
+class PostsList {
+    val code: Int = 0
+    val data: List<Data> = listOf()
 //    val meta: Meta
-)
+}
