@@ -2,14 +2,14 @@ package com.vadhara7.posts.ui.postslist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.vadhara7.posts.data.responses.Data
+import com.vadhara7.posts.model.Data
 import com.vadhara7.posts.databinding.PostItemBinding
 
 
-class PostAdapter : ListAdapter<Data, PostAdapter.PostViewHolder>(PostComparator()) {
+class PostAdapter : PagingDataAdapter<Data, PostAdapter.PostViewHolder>(PostComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val binding =

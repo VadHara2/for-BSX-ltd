@@ -39,6 +39,15 @@ android {
 }
 
 dependencies {
+    // architecture components
+    implementation "androidx.core:core-ktx:$coreVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion"
+    implementation "androidx.paging:paging-runtime-ktx:3.0.1"
+
+
     //Dagger - Hilt
     implementation "com.google.dagger:hilt-android:2.37"
     kapt "com.google.dagger:hilt-android-compiler:2.37"

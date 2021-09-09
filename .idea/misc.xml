@@ -3,9 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/drawable/activity_splash.xml" value="0.2657407407407407" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/drawable/ic_for_toolbar.xml" value="0.23177083333333334" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23177083333333334" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/drawable/ic_logo.xml" value="0.2657407407407407" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/drawable/splash_image.xml" value="0.2657407407407407" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/drawable/splash_image_night.xml" value="0.15989583333333332" />
         <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/layout/activity_post.xml" value="0.10914855072463768" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/layout/activity_splash.xml" value="0.27447916666666666" />
         <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/layout/fragment_post.xml" value="0.27447916666666666" />
         <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/layout/post_item.xml" value="0.37712519319938176" />
+        <entry key="..\:/Android Projects/for-BSX-ltd/app/src/main/res/layout/repos_load_state_footer_view_item.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>

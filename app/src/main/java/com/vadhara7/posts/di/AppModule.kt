@@ -2,8 +2,8 @@ package com.vadhara7.posts.di
 
 import android.app.Application
 import androidx.room.Room
-import com.vadhara7.posts.api.PostApi
-import com.vadhara7.posts.data.PostDatabase
+import com.vadhara7.posts.api.PostService
+import com.vadhara7.posts.db.PostDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,18 +21,18 @@ object AppModule {
     @Singleton
     fun provideRetrofit(): Retrofit =
         Retrofit.Builder()
-            .baseUrl(PostApi.BASE_URL)
+            .baseUrl(PostService.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
     @Provides
     @Singleton
-    fun provideRestaurantApi(retrofit: Retrofit): PostApi =
-        retrofit.create(PostApi::class.java)
+    fun providePostService(retrofit: Retrofit): PostService =
+        retrofit.create(PostService::class.java)
 
     @Provides
     @Singleton
-    fun provideDatabase(app: Application) : PostDatabase =
+    fun provideDatabase(app: Application): PostDatabase =
         Room.databaseBuilder(app, PostDatabase::class.java, "post_database")
             .fallbackToDestructiveMigration()
             .build()
